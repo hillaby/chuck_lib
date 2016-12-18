@@ -1,12 +1,3 @@
-// - stereo - KÉSZ
-// - generikus sweep-in és out implementálása -> ADSR!
-// - Magicba több magas felhang, karakteresebb vauvau - KÉSZ.
-// - elhalkulás nem lineáris érzetre - KÉSZ.
-// - basszusban slide up legyen ritkább - KÉSZ.
-// - végén trumpet modulációt érdekesebbé - KÉSZ.
-// - dob LPF egy kicsit magasabb freq - KÉSZ.
-// - egész szám legyen hangosabb - KÉSZ (rec.ck).
-
 1100::ms => AATimer.set_T;
 AATimer.start_at(0);
 
