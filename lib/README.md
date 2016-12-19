@@ -3,6 +3,8 @@
 Switches between different versions of the same loop at random positions.
 ##rec.ck
 May be used to record left and right channel.
+##stereo_rand_loop.ck
+It's basically two RandLoops, one for each channel.
 ##timer.ck
 A timer class for a more flexible time handling.
 
