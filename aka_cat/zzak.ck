@@ -8,15 +8,15 @@ dyLeft.limit();
 .65=>dyLeft.thresh;
 .15=>dyLeft.slopeAbove;
 
-.97=>limitingLeft.gain;
-1=>gainLeft.gain;
+.87=>limitingLeft.gain;
+.9=>gainLeft.gain;
 
 dyRight.limit();
 .65=>dyRight.thresh;
 .15=>dyRight.slopeAbove;
 
-.97=>limitingRight.gain;
-1=>gainRight.gain;
+.87=>limitingRight.gain;
+.9=>gainRight.gain;
 
 //######################################
 

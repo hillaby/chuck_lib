@@ -50,6 +50,7 @@ public class Magic01
             .125 +=> t; 
             //1.0 => s.pluck;
             0000=>s.pos;
+            1 => s_adsr.keyOn;
             // advance time
             .125 => AATimer.advance;
             //100=>AATimer.advance;
