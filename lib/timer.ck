@@ -28,11 +28,11 @@ public class Timer
     // advances time to a given number of measures
     public static void advance(float frac)
     {
-        <<<"at: ", now/1::second, " seconds">>>;
-		if (frac == 0.) return;
-		//<<<"dur: ", frac>>>;
-		//<<<"T: ", T>>>;
-		//<<<"start: ", start>>>;
+        //<<<"at: ", now/1::second, " seconds">>>;
+        if (frac == 0.) return;
+        //<<<"dur: ", frac>>>;
+        //<<<"T: ", T>>>;
+        //<<<"start: ", start>>>;
         if (now >= start)
         {
             frac::T=>now;
