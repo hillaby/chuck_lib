@@ -1,4 +1,5 @@
-Okay, this is an easy one, just type ```
+Okay, this is an easy one, just type 
+```
 chuck *.ck
 ```
 
