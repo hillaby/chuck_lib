@@ -1,4 +1,6 @@
 #Reusable classes for your music.
+##effects
+In this folder you'll find effects.
 ##rand_loop.ck
 Switches between different versions of the same loop at random positions.
 ##rec.ck
