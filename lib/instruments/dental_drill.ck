@@ -16,6 +16,7 @@ public class DentalDrill extends Instrument {
 	adsr.set(0::second, .3::Timer.get_T(), .8, .3::Timer.get_T()); 
 	adsr.keyOff();
 	
+	// sweeps LPF
 	public void sweep_lpf(float d) {
 		50=>int steps;
 		for (0=>int i; i < steps; i++) {
@@ -31,6 +32,7 @@ public class DentalDrill extends Instrument {
 		} 		
 	}
 	
+	// plays a note
 	public void note(float n, float d) {
 		adsr.attackTime(.05*Timer.get_T());
 		adsr.decayTime(.1*Timer.get_T());

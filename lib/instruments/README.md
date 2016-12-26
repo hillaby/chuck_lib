@@ -9,6 +9,8 @@ Basic strings synth.
 Sounds funny.
 ##instrument.ck
 Base class for all Instruments.
+##reggae_pluck.ck
+A guitar-like synth.
 ##tri_bass.ck
 Triangle wave bass.
 
