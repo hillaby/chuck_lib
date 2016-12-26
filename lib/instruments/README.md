@@ -1,6 +1,8 @@
 #Instruments
 ##bass_drum.ck
 A very basic bass drum.
+##bowed_string.ck
+Basic strings synth.
 ##instrument.ck
 Base class for all Instruments.
 ##tri_bass.ck
