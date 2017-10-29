@@ -8,6 +8,7 @@ Every song has its own instructions, try them.
 
 I used free sound samples from here: http://wiki.laptop.org/go/Free_sound_samples
 
-##lib
+## lib
+
 In this folder you can find reusable classes for your ChucK music.
 
