@@ -13,38 +13,18 @@ public class STalkingBass extends Instrument {
 		.2*d=>Timer.advance;
 	}
 	public void note(float n, float d, int legato) {
-	<<< "noteee">>>;
 		.2*d*Timer.get_T()=>adsr.releaseTime;
-		
+
 		n=>Std.mtof=>float fre;
-		
+
 		fre/65.4063915=> smpl.rate;
-		
+
 		if ((legato&2) == 0) {
 			0=>smpl.pos;
 			//env.keyOn(1);
 			adsr.keyOn(1);
 		}
-		/*
-		SinOsc tmp=>output;
-		.2=>tmp.gain;
-		20=>Std.mtof=>tmp.freq;
-		
-		while (1) {
-			KBHit k => now;
-			k.getchar()=>int c;
-			0=>smpl.pos;
-			<<<c>>>;
-			if (c == 113) {
-				Std.ftom(tmp.freq())+1=>Std.mtof=>tmp.freq;
-			} else if (c == 97) {
-				Std.ftom(tmp.freq())-1=>Std.mtof=>tmp.freq;
-			}
-		
-			<<<Std.ftom(tmp.freq())>>>;
-		}
-		
-		*/
+
 		.7*d=>Timer.advance;
 		if ((legato&1) == 0) {
 			adsr.keyOff(1);
