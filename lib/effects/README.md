@@ -1,10 +1,10 @@
-#Effects
-##effect.ck
+# Effects
+## effect.ck
 Base class for all Effects.
-##rand_lpf.ck
+## rand_lpf.ck
 Random low-pass filter. Changes frequency and Q randomly.
-##rand_pan.ck
+## rand_pan.ck
 Random pan effect.
-##stereo_effect.ck
+## stereo_effect.ck
 Stereo effect.
 
