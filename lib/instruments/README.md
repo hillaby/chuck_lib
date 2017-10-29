@@ -21,5 +21,7 @@ A sample-based hihat cymbal.
 A sample-based talking bass instrument.
 ## talking_bass.ck
 A "talking" bass.
+## tom.ck
+A tom drum.
 ## tri_bass.ck
 Triangle wave bass.
