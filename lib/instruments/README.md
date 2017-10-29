@@ -1,16 +1,16 @@
-#Instruments
-##chord_player.ck
+# Instruments
+## chord_player.ck
 Plays chords using the provided instruments.
-##bass_drum.ck
+## bass_drum.ck
 A very basic bass drum.
-##bowed_string.ck
+## bowed_string.ck
 Basic strings synth.
-##dental_drill.ck
+## dental_drill.ck
 Sounds funny.
-##instrument.ck
+## instrument.ck
 Base class for all Instruments.
-##reggae_pluck.ck
+## reggae_pluck.ck
 A guitar-like synth.
-##tri_bass.ck
+## tri_bass.ck
 Triangle wave bass.
 
