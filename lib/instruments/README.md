@@ -19,6 +19,8 @@ A sample-based bass drum with many samples.
 A sample-based hihat cymbal.
 ## s_talking_bass.ck
 A sample-based talking bass instrument.
+## s_tom.ck
+Sample-based tom drum.
 ## talking_bass.ck
 A "talking" bass.
 ## tom.ck
