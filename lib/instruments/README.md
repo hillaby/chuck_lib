@@ -11,7 +11,9 @@ Sounds funny.
 Base class for all Instruments.
 ## reggae_pluck.ck
 A guitar-like synth.
-# s_bass_drum.ck
+## s_aggressive_snare.ck
+An aggressive snare drum based on many samples.
+## s_bass_drum.ck
 A sample-based bass drum with many samples.
 ## tri_bass.ck
 Triangle wave bass.
