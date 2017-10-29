@@ -15,6 +15,8 @@ A guitar-like synth.
 An aggressive snare drum based on many samples.
 ## s_bass_drum.ck
 A sample-based bass drum with many samples.
+# s_talking_bass.ck
+A sample-based talking bass instrument.
 ## talking_bass.ck
 A "talking" bass.
 ## tri_bass.ck
