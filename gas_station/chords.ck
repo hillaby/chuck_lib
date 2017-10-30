@@ -29,7 +29,7 @@ public class Chords
 	violinChord.setInstrumentsSize(violin.cap());
 	for (0 => int i; i < violin.cap(); i++)
 	{
-		<<< i >>>;
+		//<<< i >>>;
 		violin[i].chuck()=>vpan[i];
 		((i % 2) - 0.5) * 0.8 => vpan[i].pan;
 		vpan[i].left => /*lpfLeft*/ gainLeft;
@@ -49,13 +49,20 @@ public class Chords
 		qpan[i].left => /*lpfLeft*/ gainLeft;
 		qpan[i].right => /*lpfRight*/ gainRight;
 		quartet[i].setGain(1);
-		if (i == 0) {
+		if (i == 0)
+		{
 			quartet[i].setOctave(-1);
-		} else if (i == 1) {
+		}
+		else if (i == 1)
+		{
 			quartet[i].setOctave(0);
-		} else if (i == 2) {
+		}
+		else if (i == 2)
+		{
 			quartet[i].setOctave(1);
-		} else {
+		}
+		else
+		{
 			quartet[i].setOctave(2);
 		}
 		quartetChord.setInstrumentAt(i, quartet[i]);
@@ -68,7 +75,8 @@ public class Chords
 
 	public void chord(string name, string chName, float dur)
 	{
-		if (name == "") {
+		if (name == "")
+		{
 			dur=>Timer.advance;
 			return;
 		}
@@ -79,10 +87,13 @@ public class Chords
 	public void piano_pattern(string name, string chName,string name2, string chName2)
 	{
 		spork~violinChord.chord(name, chName, 3, "C", 5);
-		if (!qPlaying) {
+		if (!qPlaying)
+		{
 			spork~quartetChord.chord(name, chName, 3, "C", 3, 0);
 			1=>qPlaying;
-		} else {
+		}
+		else
+		{
 			spork~quartetChord.gliss_to_chord(name, chName, 3, "C", 3, 2);
 		}
 		chord("","", .75);

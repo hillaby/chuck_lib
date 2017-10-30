@@ -67,9 +67,11 @@ hpf2.gain(6);
 plk.gain(2.1);
 adsr.set(20::ms, 20::ms, 1., .1*Timer.get_T());
 adsr.keyOff(1);
-fun void pluck() {
+fun void pluck()
+{
 	//.1=>Timer.advance;
-	while(1){
+	while(1)
+	{
 		//5400=>plk.pos;
 
 		5800=>plk.pos;
@@ -89,9 +91,11 @@ oo.setType(3);
 SinOsc filterSWP => oo.chuck => blackhole;
 .5::second/Timer.get_T()=>filterSWP.freq;
 .8=>filterSWP.phase;
-fun void sweepFilters() {
+fun void sweepFilters()
+{
 	1::samp=>now;
-	while(1) {
+	while(1)
+	{
 		1700+filterSWP.last()* 1400 => hpf.freq;
 		6700+filterSWP.last()* 1000 => hpf2.freq;
 		7700+filterSWP.last()* 7000 => lpf.freq; <<<lpf.freq()>>>;

@@ -18,7 +18,8 @@ public class Bass
 			// e..g .... .... f... f#..a .... .... x2  g..h      f f#  a  g  h   f   h b g# g f# f
 			if (what_to_play == 0)
 			{
-				for (0=>int i;i<2;i++) {
+				for (0=>int i; i<2; i++)
+				{
 					bass.note("e",1,.75);
 					bass.note("g",1,.75);
 

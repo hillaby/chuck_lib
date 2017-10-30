@@ -43,21 +43,27 @@ public class Drum
 
 	0=>int what_to_play;
 
-	public void tnote(int no, float d) {
+	public void tnote(int no, float d)
+	{
 		Std.rand2f(-1,1)=>tp.pan;
 		t.nnote(no, d);
 	}
 
-	public void playT() {
-		while(1) {
+	public void playT()
+	{
+		while(1)
+		{
 			Timer.advance(2);
-			if (maybe) {
+			if (maybe)
+			{
 				spork~tnote(0, 1.5);
 				Timer.advance(.75);
 				//tnote(.25);
 				//tnote(.25);
 				tnote(1, .25);
-			} else {
+			}
+			else
+			{
 				tnote(0, .25);
 				//tnote(.25);
 				//tnote(.25);
@@ -73,17 +79,21 @@ public class Drum
 		}
 	}
 
-	public void playB() {
-		while (1) {
+	public void playB()
+	{
+		while (1)
+		{
 			bass.note(1);
 		}
 	}
 
-	public void hhnote(float d) {
+	public void hhnote(float d)
+	{
 		Std.rand2f(-.5,.5)=>hhp.pan;
 		hh.closedNote(d);
 	}
-	public void snnote(float d) {
+	public void snnote(float d)
+	{
 		Std.rand2f(-.1,.1)=>snarePan.pan;
 		snare.note(d);
 	}
@@ -95,14 +105,18 @@ public class Drum
 		{
 			if (what_to_play == 0)
 			{
-				for (0=>int i; i<7; i++) {
+				for (0=>int i; i<7; i++)
+				{
 					hhnote(.25);
 
-					if (false) {
+					if (false)
+					{
 						Timer.advance(.25);
 						//spork~snnote(.25);
 						hhnote(.25);
-					} else {
+					}
+					else
+					{
 						hhnote(.25);
 						//spork~snnote(.25);
 						Timer.advance(.25);
@@ -126,17 +140,24 @@ public class Drum
 					hhnote(.25);
 					hhnote(.25);
 				}
-				for (0=>int i;i<2;i++) {
-					if (i == 1) {
+				for (0=>int i; i<2; i++)
+				{
+					if (i == 1)
+					{
 						hh.openNote(.5);
 						hhnote(.25);
-					} else {
+					}
+					else
+					{
 						hhnote(.25);
 						//bass.note(.25);
-						if (maybe) {
+						if (maybe)
+						{
 							Timer.advance(.25);
 							hhnote(.25);
-						} else {
+						}
+						else
+						{
 							hhnote(.25);
 							Timer.advance(.25);
 						}
@@ -147,9 +168,12 @@ public class Drum
 					hhnote(.25);
 					spork~hhnote(.25);
 					snnote(.25);
-					if (maybe) {
+					if (maybe)
+					{
 						hhnote(.25);
-					} else {
+					}
+					else
+					{
 						Timer.advance(.25);
 					}
 				}

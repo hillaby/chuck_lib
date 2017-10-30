@@ -42,7 +42,8 @@ public class Theme
 		{
 			if (what_to_play == 0)
 			{
-				for (0=>int i;i<2;i++){
+				for (0=>int i; i<2; i++)
+				{
 					mm.note("e",5,.75);
 					mm.note("h",4,2.25);
 					//Timer.advance(1);
