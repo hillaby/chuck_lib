@@ -179,10 +179,10 @@ Timer.advance(32);
 // sweep_out
 for (1000 => int i; i > 750; i--)
 {
-    //<<<i / 10.0 => Std.dbtopow>>>;
-    i / 10.0 => Std.dbtopow => gainLeft.gain;
-    i / 10.0 => Std.dbtopow => gainRight.gain;
-    .07::Timer.get_T() => now;
+	//<<<i / 10.0 => Std.dbtopow>>>;
+	i / 10.0 => Std.dbtopow => gainLeft.gain;
+	i / 10.0 => Std.dbtopow => gainRight.gain;
+	.07::Timer.get_T() => now;
 }
 
 aarec.exit();

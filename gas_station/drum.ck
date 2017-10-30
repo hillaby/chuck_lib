@@ -1,26 +1,26 @@
 public class Drum
 {
-    Gain mono => Gain gainLeft;
-    mono => Gain gainRight;
-    /* ABSndBuf snare;*/
+	Gain mono => Gain gainLeft;
+	mono => Gain gainRight;
+	/* ABSndBuf snare;*/
 	SAggressiveSnare snare;
-    Pan2 snarePan;
-    /* NRev rev=>snarePan;
-    .04=>rev.mix;*/
-    // 1=>rev.gain;
-    snare.chuck()=>snarePan;
-    snarePan.left=>gainLeft;
-    snarePan.right=>gainRight;
+	Pan2 snarePan;
+	/* NRev rev=>snarePan;
+	.04=>rev.mix;*/
+	// 1=>rev.gain;
+	snare.chuck()=>snarePan;
+	snarePan.left=>gainLeft;
+	snarePan.right=>gainRight;
 
-    snare.setGain(1.4);
-    // "drum-snare-tap.wav" => snare.read;
+	snare.setGain(1.4);
+	// "drum-snare-tap.wav" => snare.read;
 
-    //ABSndBuf bass;
+	//ABSndBuf bass;
 	.8=>float bassGain;
-    SBassDrum bass;
-    bass.chuck()=>mono;
-    bass.setGain(bassGain);
-    //"drum-bass-lo-1.wav" => bass.read;
+	SBassDrum bass;
+	bass.chuck()=>mono;
+	bass.setGain(bassGain);
+	//"drum-bass-lo-1.wav" => bass.read;
 
 	1=>float hhGain;
 	SHiHat hh;
@@ -36,12 +36,12 @@ public class Drum
 	t.setGain(1.8);
 
 
-    off();
-    spork ~ play();
-    spork ~ playT();
-    spork ~ playB();
+	off();
+	spork ~ play();
+	spork ~ playT();
+	spork ~ playB();
 
-    0=>int what_to_play;
+	0=>int what_to_play;
 
 	public void tnote(int no, float d) {
 		Std.rand2f(-1,1)=>tp.pan;
@@ -87,14 +87,14 @@ public class Drum
 		Std.rand2f(-.1,.1)=>snarePan.pan;
 		snare.note(d);
 	}
-    public void play()
-    {
+	public void play()
+	{
 		// b... ..s. .... s... x3 b,,s ..s. b..s ..s.
-        0=>int turn;
-        while(true)
-        {
-            if (what_to_play == 0)
-            {
+		0=>int turn;
+		while(true)
+		{
+			if (what_to_play == 0)
+			{
 				for (0=>int i; i<7; i++) {
 					hhnote(.25);
 
@@ -154,30 +154,30 @@ public class Drum
 					}
 				}
 			}
-        }
-    }
+		}
+	}
 
-    public void connectLeft(UGen ug)
-    {
-        gainLeft => ug;
-    }
+	public void connectLeft(UGen ug)
+	{
+		gainLeft => ug;
+	}
 
-    public void connectRight(UGen ug)
-    {
-        gainRight => ug;
-    }
+	public void connectRight(UGen ug)
+	{
+		gainRight => ug;
+	}
 
-    public void on(float g)
-    {
-        g => gainLeft.gain;
-        g => gainRight.gain;
-    }
+	public void on(float g)
+	{
+		g => gainLeft.gain;
+		g => gainRight.gain;
+	}
 
-    public void on(float g)
-    {
-        g => gainLeft.gain;
-        g => gainRight.gain;
-    }
+	public void on(float g)
+	{
+		g => gainLeft.gain;
+		g => gainRight.gain;
+	}
 
 	public void bassOn() {
 		bassGain=>bass.setGain;
@@ -195,14 +195,14 @@ public class Drum
 		0=>hh.setGain;
 	}
 
-    public void off()
-    {
-        0 => gainLeft.gain;
-        0 => gainRight.gain;
-    }
+	public void off()
+	{
+		0 => gainLeft.gain;
+		0 => gainRight.gain;
+	}
 
-    public void set_what_to_play(int p)
-    {
-        p => what_to_play;
-    }
+	public void set_what_to_play(int p)
+	{
+		p => what_to_play;
+	}
 }
