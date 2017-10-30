@@ -13,6 +13,8 @@ Base class for all Instruments.
 A guitar-like synth.
 ## s_aggressive_snare.ck
 An aggressive snare drum based on many samples.
+## s_bowed_glass.ck
+A sample-based bowed glass instrument.
 ## s_bass_drum.ck
 A sample-based bass drum with many samples.
 ## s_hihat.ck
