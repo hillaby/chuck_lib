@@ -19,6 +19,8 @@ A sample-based bowed glass instrument.
 A sample-based bass drum with many samples.
 ## s_hihat.ck
 A sample-based hihat cymbal.
+## s_marimba.ck
+A sample-based marimba.
 ## s_talking_bass.ck
 A sample-based talking bass instrument.
 ## s_tom.ck
