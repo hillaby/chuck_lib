@@ -52,10 +52,9 @@ public class ChordPlayer {
 	}
 
 
-	// returns all the notes in a chord (how many? - see param howManyNotes) starting on a note 
+	// returns all the notes in a chord (how many? - see param howManyNotes) starting on a note
 	public static float[] chordNotesRange(string noteName, string chordName, int howManyNotes, string startNote, int startOctave) {
-	
-		<<< "chnotes" >>>;
+
 		chordNotes(noteName, chordName) @=> float f[];
 
 		// calculate output array size
@@ -75,7 +74,7 @@ public class ChordPlayer {
 		//	<<<"rem notes from chord", remNotesFromChord>>>;
 		//
 		Instrument.getNote(startNote, startOctave) => float start;
-		
+
 		float out[howManyNotes];
 		0 => int actPos;
 		for (0 => int i; true; i++) {
@@ -89,7 +88,7 @@ public class ChordPlayer {
 					continue;
 				}
 				actNote => out[actPos++];
-				
+
 			}
 			if (actPos == howManyNotes) {
 				break;
@@ -102,41 +101,39 @@ public class ChordPlayer {
 	public void setInstrumentsSize(int siz) {
 		Instrument loc[siz] @=> instrs;
 	}
-	
+
 	// sets instrument at position
 	public void setInstrumentAt(int pos, Instrument instr) {
 		instr @=> instrs[pos];
 	}
-	
+
 	// plays a chord
 	public void chord(string name, string chName, float d, string startNote, int startOctave, int legato) {
-		<<<"ch">>>;
 		chordNotesRange(name, chName, instrs.cap(), startNote, startOctave) @=> float f[];
 		for (0=>int i; i < instrs.cap(); i++) {
 			spork~instrs[i].note(f[i],d,legato);
 		}
 		Timer.advance(d);
 	}
-	
+
 	// plays a chord
 	public void chord(string name, string chName, float d, string startNote, int startOctave) {
 		chord(name, chName, d, startNote, startOctave, 0);
-	}	
-	
+	}
+
 	// glissando to a chord
 	public void gliss_to_chord(string name, string chName, float d, string startNote, int startOctave, int legato) {
-		<<<"ch">>>;
 		chordNotesRange(name, chName, instrs.cap(), startNote, startOctave) @=> float f[];
 		for (0=>int i; i < instrs.cap(); i++) {
 			spork~instrs[i].gliss_to(f[i],d,legato);
 		}
 		Timer.advance(d);
-	}	
-	
+	}
+
 	// glissando to a chord
 	public void gliss_to_chord(string name, string chName, float d, string startNote, int startOctave) {
 		gliss_to_chord(name, chName, d, startNote, startOctave, 0);
-	}	
+	}
 
 	// arpeggio
 	public void arpeggio(string name, string chName, float d, int howManyNotes,
@@ -144,12 +141,12 @@ public class ChordPlayer {
 		chordNotesRange(name, chName, howManyNotes, startNote, startOctave) @=> float f[];
 		for (0=>int i; i<f.cap(); i++) {
 			<<<"note: ", f[i]>>>;
-			
+
 			spork~instrs[i % instrs.cap()].note(f[i],d*instrs.cap());
 			Timer.advance(d);
 		}
 	}
-	
+
 	// reverse arpeggio (down)
 	public void revArpeggio(string name, string chName, float d, int howManyNotes,
 			string startNote, int startOctave) {
@@ -157,7 +154,7 @@ public class ChordPlayer {
 		0 => int actInstr;
 		for ((f.cap()-1)=>int i; i>=0; i--) {
 			<<<"note: ", f[i]>>>;
-			
+
 			spork~instrs[actInstr++ % instrs.cap()].note(f[i],d*instrs.cap());
 			Timer.advance(d);
 		}

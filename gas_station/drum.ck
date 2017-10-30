@@ -125,7 +125,6 @@ public class Drum
 					Timer.advance(.25);
 					hhnote(.25);
 					spork~hhnote(.25);
-					<<<"lkl">>>;
 					snnote(.25);
 					Timer.advance(.25);
 					hh.openNote(.5);

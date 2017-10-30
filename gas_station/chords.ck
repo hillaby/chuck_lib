@@ -15,7 +15,7 @@ public class Chords
 	mchord.setInstrumentsSize(mar.cap());
 	for (0 => int i; i < mar.cap(); i++)
 	{
-		<<< i >>>;
+		//<<< i >>>;
 		mar[i].chuck()=>mpan[i];
 		((i % 2) - 0.5) * 0.8 => mpan[i].pan;
 		mpan[i].left => /*lpfLeft*/ gainLeft;
