@@ -58,34 +58,34 @@ public class Drums
         {
             if (what_to_play == 0)
             {
-				spork~bass.note(0, .5);
+    spork~bass.note(0, .5);
                 if (turn % 2 == 0)
                 {
                     spork~sizzle.note(0, 2);
                 }
                 hhclose.note(0, .25);
                 hhclosed.note(0, .25);
-				spork~bass.note(0, .5);
+    spork~bass.note(0, .5);
                 hhclose.note(0, .5);
-				//hhclosed.note(0, .25);
+    //hhclosed.note(0, .25);
                 //hhclose.note(0, .25);
                 spork~snare.note(0, .5);
                 spork~bass.note(0, .5);
                 hhclose.note(0, .25);
-				if (Std.randf() > .6) {
-					spork~snare.note(0, .5);
-				}
-				hhclosed.note(0, .25);
+    if (Std.randf() > .6) {
+    spork~snare.note(0, .5);
+    }
+    hhclosed.note(0, .25);
                 spork~bass.note(0, .5);
                 hhclose.note(0, .25);
-				spork~hhclosed.note(0, .25);
+    spork~hhclosed.note(0, .25);
                 //spork~hhclose.note(0, .25);
-				if (Std.randf() > 0) {
-					tom.note(0, .25);
+    if (Std.randf() > 0) {
+    tom.note(0, .25);
                 } else {
-					snare.note(0, .25);
-				}
-				turn++;
+    snare.note(0, .25);
+    }
+    turn++;
             }
         }
     }
