@@ -1,5 +1,5 @@
 #!/bin/bash
 
 chuck \
-    --srate44100 \
+    --srate44100 $* \
     *.ck
