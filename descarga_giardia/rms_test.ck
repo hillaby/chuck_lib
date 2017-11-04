@@ -33,7 +33,7 @@ SndBuf b =>mono;
 fun void lll() {
 	while(1) {
 		0=>b.pos;
-		
+
 		b.samples()::samp=>now;
 	}
 }*/
@@ -109,4 +109,3 @@ loop4.setSilenceArr(SA_01.get());
 e1.duration()=>now;
 
 rec.exit();
-
