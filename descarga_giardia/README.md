@@ -11,5 +11,5 @@ can be directly played by typing
 ruby rms_test.rb
 ```
 
-You can change the output device by specifying a --dac(N) parameter. See
+You can change the output device by specifying a `--dac(N)` parameter. See
 http://chuck.cs.princeton.edu/doc/program/vm.html.
