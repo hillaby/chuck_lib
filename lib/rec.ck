@@ -13,7 +13,7 @@ public class Rec
         dac.left => Gain gleft => WvOut wleft => blackhole;
         dac.right => Gain gright => WvOut wright => blackhole;
         // this is the output file name
-        
+
         (filename + "_left.wav") => wleft.wavFilename;
         (filename + "_right.wav") => wright.wavFilename;
         <<<"writing to file:", "'" + filename + "'">>>;
@@ -25,4 +25,12 @@ public class Rec
         while( true ) 1::second => now;
     }
 
+    public static void recMono(string filename)
+    {
+        dac => Gain g => WvOut w => blackhole;
+        dac.right => Gain gright => WvOut wright => blackhole;
+        (filename + ".wav") => w.wavFilename;
+        <<<"writing to file:", "'" + filename + "'">>>;
+        while( true ) 1::second => now;
+    }
 }

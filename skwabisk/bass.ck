@@ -55,7 +55,7 @@ public class Bass
                     bass.note(24, .5);
                     bass.note(17, .5);
 
-                    // esz
+                    // es
                     bass.note(15, .5);
 
                     // g
