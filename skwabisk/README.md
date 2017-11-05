@@ -1,0 +1,4 @@
+Just type
+```
+chuck *.ck
+```
